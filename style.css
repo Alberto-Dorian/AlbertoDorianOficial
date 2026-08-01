@@ -1,235 +1,187 @@
+/* ===========================================
+   ALBERTO DORIAN OFFICIAL
+   GLOBAL STYLE
+=========================================== */
+
+@import url('hero.css');
+@import url('slider.css');
+@import url('music.css');
+@import url('footer.css');
+
+:root{
+
+--black:#050505;
+--black2:#111111;
+--gold:#D4AF37;
+--gold-light:#F6D365;
+--gold-dark:#9E7A1A;
+--white:#F5F5F5;
+--gray:#BFBFBF;
+
+--glass:rgba(255,255,255,.08);
+
+--shadow:
+0 15px 45px rgba(0,0,0,.45);
+
+--radius:22px;
+
+}
+
 *{
+
 margin:0;
 padding:0;
 box-sizing:border-box;
+
 }
 
 html{
+
 scroll-behavior:smooth;
+
 }
 
 body{
 
+background:var(--black);
+
+color:var(--white);
+
 font-family:'Montserrat',sans-serif;
-
-background:#050505;
-
-color:white;
 
 overflow-x:hidden;
 
 }
 
-.hero{
+img{
+
+max-width:100%;
+
+display:block;
+
+}
+
+a{
+
+text-decoration:none;
+
+color:inherit;
+
+}
+
+button{
+
+font-family:inherit;
+
+cursor:pointer;
+
+}
+
+section{
+
+padding:110px 8%;
 
 position:relative;
 
-width:100%;
-
-height:100vh;
-
-overflow:hidden;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
 }
 
-.hero-video{
-
-position:absolute;
-
-top:0;
-
-left:0;
+.container{
 
 width:100%;
 
-height:100%;
+max-width:1400px;
 
-object-fit:cover;
-
-z-index:-3;
-
-filter:
-brightness(.35)
-contrast(1.15)
-saturate(1.1);
+margin:auto;
 
 }
 
-.overlay{
-
-position:absolute;
-
-inset:0;
-
-background:
-
-linear-gradient(
-180deg,
-rgba(0,0,0,.25),
-rgba(0,0,0,.60),
-rgba(0,0,0,.92));
-
-z-index:-2;
-
-}
-
-nav{
-
-position:absolute;
-
-top:0;
-
-left:0;
-
-width:100%;
-
-padding:28px 7%;
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
-z-index:10;
-
-}
-
-.logo{
-
-display:flex;
-
-align-items:center;
-
-gap:16px;
-
-}
-
-.logo-icon{
-
-font-size:40px;
-
-filter:
-
-drop-shadow(0 0 10px gold);
-
-}
-
-.logo h2{
+.title{
 
 font-family:'Cinzel',serif;
 
-font-size:26px;
+font-size:58px;
 
-letter-spacing:2px;
+font-weight:700;
 
 background:
-
 linear-gradient(
 180deg,
-#fff7d6,
-#f6d365,
-#d4af37);
+#FFF8D7,
+#F6D365,
+#D4AF37);
 
 -webkit-background-clip:text;
 
 -webkit-text-fill-color:transparent;
 
-}
-
-.logo p{
-
-font-size:13px;
-
-letter-spacing:5px;
-
-color:#d7b45d;
+margin-bottom:25px;
 
 }
 
-.menu{
+.subtitle{
 
-display:flex;
+font-size:18px;
 
-gap:35px;
+color:var(--gray);
 
-}
+line-height:1.8;
 
-.menu a{
-
-text-decoration:none;
-
-color:white;
-
-font-weight:600;
-
-transition:.35s;
-
-position:relative;
+max-width:700px;
 
 }
 
-.menu a:hover{
+.gold{
 
-color:#f6d365;
-
-}
-
-.menu a::after{
-
-content:"";
-
-position:absolute;
-
-bottom:-6px;
-
-left:0;
-
-width:0;
-
-height:2px;
-
-background:#f6d365;
-
-transition:.35s;
+color:var(--gold-light);
 
 }
 
-.menu a:hover::after{
+.glass{
 
-width:100%;
+background:var(--glass);
 
-}
+backdrop-filter:blur(18px);
 
-.hero-content{
+border:1px solid rgba(255,255,255,.08);
 
-text-align:center;
-
-max-width:900px;
-
-padding:20px;
-
-animation:fadeHero 1.5s ease;
+border-radius:var(--radius);
 
 }
 
-@keyframes fadeHero{
+::-webkit-scrollbar{
 
-from{
+width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#111;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:linear-gradient(
+180deg,
+var(--gold-light),
+var(--gold-dark));
+
+border-radius:20px;
+
+}
+
+.fade{
 
 opacity:0;
 
-transform:translateY(50px);
+transform:translateY(40px);
+
+transition:1s;
 
 }
 
-to{
+.fade.show{
 
 opacity:1;
 
@@ -237,146 +189,23 @@ transform:none;
 
 }
 
-}
-
-.hero-content h1{
-
-font-family:'Cinzel',serif;
-
-font-size:78px;
-
-line-height:1.05;
-
-background:
-
-linear-gradient(
-180deg,
-#fff6cf,
-#ffd86a,
-#d4af37);
-
--webkit-background-clip:text;
-
--webkit-text-fill-color:transparent;
-
-text-shadow:
-
-0 0 30px rgba(255,215,120,.35);
-
-margin-bottom:25px;
-
-}
-
-.hero-content p{
-
-font-size:24px;
-
-color:#ddd;
-
-margin-bottom:45px;
-
-letter-spacing:2px;
-
-}
-
-.hero-buttons{
-
-display:flex;
-
-justify-content:center;
-
-gap:25px;
-
-flex-wrap:wrap;
-
-}
-
-.hero-buttons a{
-
-padding:18px 42px;
-
-border-radius:50px;
-
-text-decoration:none;
-
-font-weight:bold;
-
-font-size:18px;
-
-transition:.35s;
-
-}
-
-.gold{
-
-background:
-
-linear-gradient(
-135deg,
-#b8860b,
-#ffd86a);
-
-color:#111;
-
-}
-
-.dark{
-
-background:
-
-rgba(255,255,255,.08);
-
-border:1px solid rgba(255,215,120,.35);
-
-color:white;
-
-backdrop-filter:blur(12px);
-
-}
-
-.hero-buttons a:hover{
-
-transform:translateY(-5px);
-
-box-shadow:
-
-0 0 30px rgba(255,215,120,.35);
-
-}
-
 @media(max-width:900px){
 
-.menu{
+.title{
 
-display:none;
-
-}
-
-.hero-content h1{
-
-font-size:48px;
+font-size:38px;
 
 }
 
-.hero-content p{
+.subtitle{
 
-font-size:18px;
-
-}
-
-.hero-buttons{
-
-flex-direction:column;
-
-align-items:center;
+font-size:16px;
 
 }
 
-.hero-buttons a{
+section{
 
-width:280px;
-
-text-align:center;
+padding:80px 25px;
 
 }
 
