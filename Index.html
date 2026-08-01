@@ -8,31 +8,22 @@
 
 <title>Alberto Dorian | Official Website</title>
 
-<meta name="description"
-content="Official Website of Alberto Dorian | TumbadoBeat">
+<meta name="description" content="Official website of Alberto Dorian | TumbadoBeat">
 
-<meta name="theme-color"
-content="#050505">
+<meta name="theme-color" content="#050505">
 
-<link rel="preconnect"
-href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link rel="preconnect"
-href="https://fonts.gstatic.com"
-crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Montserrat:wght@300;400;500;600;700;800&display=swap"
-rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-
-<link rel="stylesheet"
-href="style.css">
+<link rel="stylesheet" href="style.css">
 
 </head>
 
-<body>
+<body id="home">
 
 <header class="hero">
 
@@ -43,9 +34,7 @@ muted
 loop
 playsinline>
 
-<source
-src="assets/videos/background.mp4"
-type="video/mp4">
+<source src="assets/videos/background.mp4" type="video/mp4">
 
 </video>
 
@@ -53,7 +42,7 @@ type="video/mp4">
 
 <nav>
 
-<div class="logo">
+<a href="#home" class="logo">
 
 <div class="logo-circle">
 
@@ -61,7 +50,7 @@ AD
 
 </div>
 
-<div>
+<div class="logo-text">
 
 <h2>ALBERTO DORIAN</h2>
 
@@ -69,7 +58,7 @@ AD
 
 </div>
 
-</div>
+</a>
 
 <ul class="menu">
 
@@ -85,11 +74,11 @@ AD
 
 </ul>
 
-<div class="menu-mobile">
+<button class="menu-mobile">
 
 <i class="fa-solid fa-bars"></i>
 
-</div>
+</button>
 
 </nav>
 
@@ -103,9 +92,9 @@ OFFICIAL WEBSITE
 
 <h1>
 
-DONDE EL
+DONDE EL<br>
 
-TUMBADOBEAT
+TUMBADOBEAT<br>
 
 COBRA VIDA
 
@@ -119,8 +108,7 @@ Una nueva experiencia musical creada por Alberto Dorian.
 
 <div class="hero-buttons">
 
-<a href="#music"
-class="btn gold">
+<a href="#music" class="btn gold">
 
 <i class="fa-solid fa-play"></i>
 
@@ -128,8 +116,7 @@ Escuchar Ahora
 
 </a>
 
-<a href="#release"
-class="btn glass">
+<a href="#release" class="btn glass">
 
 <i class="fa-solid fa-rocket"></i>
 
@@ -150,7 +137,7 @@ class="btn glass">
 </header>
 
 <section
-id="hero-slider"
+id="release"
 class="hero-slider">
 
 <div class="slider">
@@ -179,9 +166,13 @@ Y Si Decides Regresar
 
 <p>
 
-Lanzamiento
+Nuevo lanzamiento
 
-<strong>08 de Agosto</strong>
+<strong>
+
+08 de Agosto 2026
+
+</strong>
 
 </p>
 
@@ -192,21 +183,13 @@ Lanzamiento
 <div class="slide spotify-slide">
 
 <iframe
-
-style="border-radius:18px"
-
+style="border-radius:20px"
 src="https://open.spotify.com/embed/track/2sntBB1r02eLI8M34rfThr?utm_source=generator"
-
 width="100%"
-
 height="352"
-
 frameborder="0"
-
 allowfullscreen
-
 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-
 loading="lazy">
 
 </iframe>
@@ -243,14 +226,202 @@ loading="lazy">
 
 </section>
 
+<section id="music" class="music">
 
-<script src="js/main.js"></script>
-<script src="js/slider.js"></script>
+<div class="container">
+
+<h2 class="title">
+Música
+</h2>
+
+<p class="subtitle">
+Escucha todos los lanzamientos oficiales de Alberto Dorian.
+</p>
+
+<div class="music-grid">
+
+<div class="music-card">
+
+<img src="assets/images/baila-sin-control.jpg" alt="Baila Sin Control">
+
+<h3>Baila Sin Control</h3>
+
+<p>Disponible en todas las plataformas.</p>
+
+<a class="listen-button"
+href="https://open.spotify.com/track/2sntBB1r02eLI8M34rfThr?si=bCA7SJUBQIe3IVQpiLJ4hw&utm_source=copy-link"
+target="_blank">
+
+<i class="fa-brands fa-spotify"></i>
+
+Escuchar
+
+</a>
+
+</div>
+
+<div class="music-card">
+
+<img src="assets/images/y-si-decides-regresar.jpg" alt="Y Si Decides Regresar">
+
+<h3>Y Si Decides Regresar</h3>
+
+<p>
+
+Lanzamiento oficial
+
+<strong>08 de Agosto 2026</strong>
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="videos">
+
+<div class="container">
+
+<h2 class="title">
+
+Videos
+
+</h2>
+
+<p class="subtitle">
+
+Video oficial de Baila Sin Control.
+
+</p>
+
+<div class="video-wrapper">
+
+<iframe
+src="https://www.youtube.com/embed/eIcZxNtSaDs"
+title="Video Oficial"
+allowfullscreen>
+
+</iframe>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="bio">
+
+<div class="container">
+
+<h2 class="title">
+
+Biografía
+
+</h2>
+
+<p class="subtitle">
+
+Alberto Dorian es un artista mexicano y creador del movimiento
+<strong>TumbadoBeat</strong>, una propuesta musical que fusiona sonidos del regional mexicano con influencias urbanas y electrónicas para crear una identidad propia.
+
+</p>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<div class="container">
+
+<h2 class="title">
+
+Redes Oficiales
+
+</h2>
+
+<div class="social-grid">
+
+<a href="https://open.spotify.com/artist/05JuuguaTxtV2HAIijE2MU"
+target="_blank">
+
+<i class="fa-brands fa-spotify"></i>
+
+Spotify
+
+</a>
+
+<a href="https://music.apple.com/mx/artist/alberto-dorian/6787090805"
+target="_blank">
+
+<i class="fa-brands fa-apple"></i>
+
+Apple Music
+
+</a>
+
+<a href="https://www.instagram.com/albertodorianmusic"
+target="_blank">
+
+<i class="fa-brands fa-instagram"></i>
+
+Instagram
+
+</a>
+
+<a href="https://www.tiktok.com/@albertodorianmusic"
+target="_blank">
+
+<i class="fa-brands fa-tiktok"></i>
+
+TikTok
+
+</a>
+
+<a href="https://x.com/albertodorianof"
+target="_blank">
+
+<i class="fa-brands fa-x-twitter"></i>
+
+X
+
+</a>
+
+<a href="https://whatsapp.com/channel/0029VbCJziiEawdm4l0Td80a"
+target="_blank">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+WhatsApp Channel
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+
+© <span id="year"></span>
+
+Alberto Dorian · TumbadoBeat™
+
+</p>
+
+</footer>
+
+<script src="script.js"></script>
 
 </body>
 
 </html>
 
-
-
-
+  
