@@ -4,14 +4,15 @@
 <head>
 
 <meta charset="UTF-8">
-
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Alberto Dorian | Official Website</title>
 
 <meta name="description"
 content="Official Website of Alberto Dorian | TumbadoBeat">
+
+<meta name="theme-color"
+content="#050505">
 
 <link rel="preconnect"
 href="https://fonts.googleapis.com">
@@ -20,7 +21,7 @@ href="https://fonts.googleapis.com">
 href="https://fonts.gstatic.com"
 crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap"
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Montserrat:wght@300;400;500;600;700;800&display=swap"
 rel="stylesheet">
 
 <link rel="stylesheet"
@@ -54,13 +55,9 @@ type="video/mp4">
 
 <div class="logo">
 
-<div class="logo-mark">
-
 <div class="logo-circle">
 
 AD
-
-</div>
 
 </div>
 
@@ -74,17 +71,23 @@ AD
 
 </div>
 
-<div class="menu">
+<ul class="menu">
 
-<a href="#">Inicio</a>
+<li><a href="#home">Inicio</a></li>
 
-<a href="#">Música</a>
+<li><a href="#music">Música</a></li>
 
-<a href="#">Videos</a>
+<li><a href="#videos">Videos</a></li>
 
-<a href="#">Biografía</a>
+<li><a href="#bio">Biografía</a></li>
 
-<a href="#">Contacto</a>
+<li><a href="#contact">Contacto</a></li>
+
+</ul>
+
+<div class="menu-mobile">
+
+<i class="fa-solid fa-bars"></i>
 
 </div>
 
@@ -92,11 +95,17 @@ AD
 
 <div class="hero-content">
 
+<span class="subtitle">
+
+OFFICIAL WEBSITE
+
+</span>
+
 <h1>
 
-DONDE EL<br>
+DONDE EL
 
-TUMBADOBEAT<br>
+TUMBADOBEAT
 
 COBRA VIDA
 
@@ -104,23 +113,27 @@ COBRA VIDA
 
 <p>
 
-Una nueva experiencia musical.
+Una nueva experiencia musical creada por Alberto Dorian.
 
 </p>
 
 <div class="hero-buttons">
 
 <a href="#music"
-class="gold">
+class="btn gold">
 
-▶ Escuchar Ahora
+<i class="fa-solid fa-play"></i>
+
+Escuchar Ahora
 
 </a>
 
 <a href="#release"
-class="dark">
+class="btn glass">
 
-🚀 Último Lanzamiento
+<i class="fa-solid fa-rocket"></i>
+
+Último Lanzamiento
 
 </a>
 
@@ -128,7 +141,107 @@ class="dark">
 
 </div>
 
+<div class="scroll-indicator">
+
+<i class="fa-solid fa-chevron-down"></i>
+
+</div>
+
 </header>
+
+<section
+id="hero-slider"
+class="hero-slider">
+
+<div class="slider">
+
+<div class="slide active">
+
+<img
+src="assets/images/baila-sin-control.jpg"
+alt="Baila Sin Control">
+
+</div>
+
+<div class="slide">
+
+<img
+src="assets/images/y-si-decides-regresar.jpg"
+alt="Y Si Decides Regresar">
+
+<div class="release-info">
+
+<h2>
+
+Y Si Decides Regresar
+
+</h2>
+
+<p>
+
+Lanzamiento
+
+<strong>08 de Agosto</strong>
+
+</p>
+
+</div>
+
+</div>
+
+<div class="slide spotify-slide">
+
+<iframe
+
+style="border-radius:18px"
+
+src="https://open.spotify.com/embed/track/2sntBB1r02eLI8M34rfThr?utm_source=generator"
+
+width="100%"
+
+height="352"
+
+frameborder="0"
+
+allowfullscreen
+
+allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+
+loading="lazy">
+
+</iframe>
+
+</div>
+
+</div>
+
+<div class="slider-controls">
+
+<button id="prev">
+
+<i class="fa-solid fa-chevron-left"></i>
+
+</button>
+
+<button id="next">
+
+<i class="fa-solid fa-chevron-right"></i>
+
+</button>
+
+</div>
+
+<div class="dots">
+
+<span class="dot active"></span>
+
+<span class="dot"></span>
+
+<span class="dot"></span>
+
+</div>
+
+</section>
 
 <script src="script.js"></script>
 
