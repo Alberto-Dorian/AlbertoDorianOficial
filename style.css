@@ -1,37 +1,24 @@
-/* ===========================================
-   ALBERTO DORIAN OFFICIAL
-   GLOBAL STYLE
-=========================================== */
+/*=================================================
+ ALBERTO DORIAN OFFICIAL
+ VERSION 1.0
+=================================================*/
 
-@import url('hero.css');
-@import url('slider.css');
-@import url('music.css');
-@import url('footer.css');
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
 :root{
 
 --black:#050505;
---black2:#111111;
+--black2:#101010;
+
 --gold:#D4AF37;
---gold-light:#F6D365;
---gold-dark:#9E7A1A;
+--goldLight:#F6D365;
+
 --white:#F5F5F5;
---gray:#BFBFBF;
-
---glass:rgba(255,255,255,.08);
-
---shadow:
-0 15px 45px rgba(0,0,0,.45);
-
---radius:22px;
-
-}
-
-*{
-
-margin:0;
-padding:0;
-box-sizing:border-box;
+--gray:#C8C8C8;
 
 }
 
@@ -45,9 +32,9 @@ body{
 
 background:var(--black);
 
-color:var(--white);
-
 font-family:'Montserrat',sans-serif;
+
+color:var(--white);
 
 overflow-x:hidden;
 
@@ -55,9 +42,9 @@ overflow-x:hidden;
 
 img{
 
-max-width:100%;
-
 display:block;
+
+max-width:100%;
 
 }
 
@@ -69,168 +56,19 @@ color:inherit;
 
 }
 
-button{
-
-font-family:inherit;
-
-cursor:pointer;
-
-}
-
-section{
-
-padding:110px 8%;
-
-position:relative;
-
-}
-
-.container{
-
-width:100%;
-
-max-width:1400px;
-
-margin:auto;
-
-}
-
-.title{
-
-font-family:'Cinzel',serif;
-
-font-size:58px;
-
-font-weight:700;
-
-background:
-linear-gradient(
-180deg,
-#FFF8D7,
-#F6D365,
-#D4AF37);
-
--webkit-background-clip:text;
-
--webkit-text-fill-color:transparent;
-
-margin-bottom:25px;
-
-}
-
-.subtitle{
-
-font-size:18px;
-
-color:var(--gray);
-
-line-height:1.8;
-
-max-width:700px;
-
-}
-
-.gold{
-
-color:var(--gold-light);
-
-}
-
-.glass{
-
-background:var(--glass);
-
-backdrop-filter:blur(18px);
-
-border:1px solid rgba(255,255,255,.08);
-
-border-radius:var(--radius);
-
-}
-
-::-webkit-scrollbar{
-
-width:10px;
-
-}
-
-::-webkit-scrollbar-track{
-
-background:#111;
-
-}
-
-::-webkit-scrollbar-thumb{
-
-background:linear-gradient(
-180deg,
-var(--gold-light),
-var(--gold-dark));
-
-border-radius:20px;
-
-}
-
-.fade{
-
-opacity:0;
-
-transform:translateY(40px);
-
-transition:1s;
-
-}
-
-.fade.show{
-
-opacity:1;
-
-transform:none;
-
-}
-
-@media(max-width:900px){
-
-.title{
-
-font-size:38px;
-
-}
-
-.subtitle{
-
-font-size:16px;
-
-}
-
-section{
-
-padding:80px 25px;
-
-}
-
-}
-
-
-/*=========================================
-  HERO
-=========================================*/
-
 .hero{
 
 position:relative;
 
-width:100%;
-
 height:100vh;
-
-overflow:hidden;
 
 display:flex;
 
+justify-content:center;
+
 align-items:center;
 
-justify-content:center;
+overflow:hidden;
 
 }
 
@@ -239,42 +77,19 @@ justify-content:center;
 position:absolute;
 
 top:0;
-
 left:0;
 
 width:100%;
-
 height:100%;
 
 object-fit:cover;
 
-z-index:-3;
-
 filter:
 
-brightness(.28)
+brightness(.30)
+contrast(1.15);
 
-contrast(1.15)
-
-saturate(1.1);
-
-animation:videoZoom 25s linear infinite alternate;
-
-}
-
-@keyframes videoZoom{
-
-0%{
-
-transform:scale(1);
-
-}
-
-100%{
-
-transform:scale(1.08);
-
-}
+z-index:-3;
 
 }
 
@@ -287,14 +102,10 @@ inset:0;
 background:
 
 linear-gradient(
-
 180deg,
-
-rgba(0,0,0,.15),
-
-rgba(0,0,0,.55),
-
-rgba(0,0,0,.90));
+rgba(0,0,0,.20),
+rgba(0,0,0,.60),
+rgba(0,0,0,.92));
 
 z-index:-2;
 
@@ -334,61 +145,55 @@ gap:18px;
 
 .logo-circle{
 
-width:74px;
+width:72px;
 
-height:74px;
+height:72px;
 
 border-radius:50%;
 
 display:flex;
 
-align-items:center;
-
 justify-content:center;
+
+align-items:center;
 
 font-family:'Cinzel',serif;
 
-font-size:30px;
+font-size:28px;
 
 font-weight:800;
 
 background:
 
 linear-gradient(
-
 180deg,
-
 #FFF8D7,
-
 #F6D365,
-
-#C89D24);
+#D4AF37);
 
 color:#111;
 
-border:2px solid rgba(255,215,120,.45);
-
 box-shadow:
 
-0 0 30px rgba(255,215,120,.45);
+0 0 35px rgba(255,215,120,.45);
 
-animation:logoGlow 3s ease-in-out infinite alternate;
+animation:logoGlow 3s infinite alternate;
 
 }
 
 @keyframes logoGlow{
 
-0%{
+from{
 
 transform:scale(1);
 
 box-shadow:
 
-0 0 18px rgba(255,215,120,.25);
+0 0 18px rgba(255,215,120,.35);
 
 }
 
-100%{
+to{
 
 transform:scale(1.05);
 
@@ -400,7 +205,7 @@ box-shadow:
 
 }
 
-.logo h2{
+.logo-text h2{
 
 font-family:'Cinzel',serif;
 
@@ -411,13 +216,9 @@ letter-spacing:2px;
 background:
 
 linear-gradient(
-
 180deg,
-
-#FFF9DA,
-
+#FFF8D7,
 #F6D365,
-
 #D4AF37);
 
 -webkit-background-clip:text;
@@ -426,15 +227,15 @@ linear-gradient(
 
 }
 
-.logo p{
-
-margin-top:3px;
+.logo-text p{
 
 font-size:12px;
 
 letter-spacing:5px;
 
-color:#d6b564;
+color:var(--gold);
+
+margin-top:4px;
 
 }
 
@@ -442,7 +243,7 @@ color:#d6b564;
 
 display:flex;
 
-gap:38px;
+gap:40px;
 
 list-style:none;
 
@@ -450,11 +251,9 @@ list-style:none;
 
 .menu a{
 
-position:relative;
-
 font-weight:600;
 
-color:#fff;
+position:relative;
 
 transition:.35s;
 
@@ -462,7 +261,7 @@ transition:.35s;
 
 .menu a:hover{
 
-color:var(--gold-light);
+color:var(--goldLight);
 
 }
 
@@ -480,7 +279,7 @@ width:0;
 
 height:2px;
 
-background:var(--gold-light);
+background:var(--goldLight);
 
 transition:.35s;
 
@@ -496,11 +295,13 @@ width:100%;
 
 display:none;
 
-font-size:28px;
+background:none;
 
-color:var(--gold-light);
+border:none;
 
-cursor:pointer;
+font-size:30px;
+
+color:var(--goldLight);
 
 }
 
@@ -508,49 +309,27 @@ cursor:pointer;
 
 text-align:center;
 
-max-width:950px;
+max-width:900px;
 
-padding:25px;
-
-animation:heroFade 1.5s ease;
+padding:20px;
 
 }
 
-@keyframes heroFade{
-
-from{
-
-opacity:0;
-
-transform:translateY(45px);
-
-}
-
-to{
-
-opacity:1;
-
-transform:none;
-
-}
-
-}
-
-.hero-content .subtitle{
+.subtitle{
 
 display:inline-block;
 
-padding:8px 22px;
+padding:8px 20px;
 
-border-radius:50px;
+border-radius:40px;
 
 background:rgba(255,255,255,.08);
 
-backdrop-filter:blur(10px);
+backdrop-filter:blur(12px);
 
-border:1px solid rgba(255,255,255,.12);
+border:1px solid rgba(255,255,255,.08);
 
-letter-spacing:4px;
+letter-spacing:3px;
 
 font-size:13px;
 
@@ -562,22 +341,18 @@ margin-bottom:25px;
 
 font-family:'Cinzel',serif;
 
-font-size:84px;
+font-size:82px;
 
 line-height:1.05;
 
-margin-bottom:28px;
+margin-bottom:30px;
 
 background:
 
 linear-gradient(
-
 180deg,
-
 #FFF8D7,
-
 #F6D365,
-
 #D4AF37);
 
 -webkit-background-clip:text;
@@ -586,7 +361,7 @@ linear-gradient(
 
 text-shadow:
 
-0 0 35px rgba(255,215,120,.25);
+0 0 30px rgba(255,215,120,.25);
 
 }
 
@@ -594,13 +369,9 @@ text-shadow:
 
 font-size:22px;
 
-color:#d9d9d9;
+color:var(--gray);
 
 margin-bottom:45px;
-
-max-width:720px;
-
-margin-inline:auto;
 
 line-height:1.8;
 
@@ -624,11 +395,9 @@ padding:18px 42px;
 
 border-radius:60px;
 
-font-weight:700;
-
 font-size:18px;
 
-transition:.35s;
+font-weight:700;
 
 display:flex;
 
@@ -636,31 +405,32 @@ align-items:center;
 
 gap:12px;
 
+transition:.35s;
+
 }
 
-.btn.gold{
+.gold{
 
 background:
 
 linear-gradient(
-
 135deg,
-
-#C89D24,
-
+#B8860B,
 #F6D365);
 
 color:#111;
 
 }
 
-.btn.glass{
+.glass{
 
-background:rgba(255,255,255,.08);
+background:
 
-border:1px solid rgba(255,255,255,.15);
+rgba(255,255,255,.08);
 
-backdrop-filter:blur(12px);
+border:1px solid rgba(255,255,255,.10);
+
+backdrop-filter:blur(16px);
 
 }
 
@@ -670,7 +440,7 @@ transform:translateY(-5px);
 
 box-shadow:
 
-0 0 28px rgba(255,215,120,.30);
+0 0 25px rgba(255,215,120,.35);
 
 }
 
@@ -684,92 +454,40 @@ left:50%;
 
 transform:translateX(-50%);
 
-font-size:32px;
+font-size:30px;
 
-color:var(--gold-light);
+color:var(--goldLight);
 
-animation:scrollMove 2s infinite;
+animation:bounce 2s infinite;
 
 }
 
-@keyframes scrollMove{
+@keyframes bounce{
 
 0%,100%{
 
-transform:translateX(-50%) translateY(0);
+transform:
+
+translateX(-50%)
+
+translateY(0);
 
 }
 
 50%{
 
-transform:translateX(-50%) translateY(10px);
+transform:
 
-}
+translateX(-50%)
 
-}
-
-@media(max-width:980px){
-
-.menu{
-
-display:none;
-
-}
-
-.menu-mobile{
-
-display:block;
-
-}
-
-.hero-content h1{
-
-font-size:52px;
-
-}
-
-.hero-content p{
-
-font-size:18px;
-
-}
-
-.hero-buttons{
-
-flex-direction:column;
-
-align-items:center;
-
-}
-
-.btn{
-
-width:290px;
-
-justify-content:center;
-
-}
-
-.logo h2{
-
-font-size:20px;
-
-}
-
-.logo-circle{
-
-width:60px;
-
-height:60px;
-
-font-size:24px;
+translateY(12px);
 
 }
 
 }
 
 /*=========================================
-  HERO SLIDER
+ HERO SLIDER
 =========================================*/
 
 .hero-slider{
@@ -783,10 +501,6 @@ linear-gradient(
 #050505,
 #0d0d0d);
 
-position:relative;
-
-overflow:hidden;
-
 }
 
 .slider{
@@ -795,18 +509,19 @@ position:relative;
 
 max-width:1400px;
 
-margin:auto;
-
 height:650px;
 
-border-radius:30px;
+margin:auto;
 
 overflow:hidden;
 
-box-shadow:
-0 25px 60px rgba(0,0,0,.55);
+border-radius:30px;
 
 background:#111;
+
+box-shadow:
+
+0 25px 60px rgba(0,0,0,.55);
 
 }
 
@@ -814,25 +529,19 @@ background:#111;
 
 position:absolute;
 
-top:0;
-
-left:0;
-
-width:100%;
-
-height:100%;
-
-opacity:0;
-
-visibility:hidden;
-
-transition:opacity .9s ease;
+inset:0;
 
 display:flex;
 
 align-items:center;
 
 justify-content:center;
+
+opacity:0;
+
+visibility:hidden;
+
+transition:opacity .8s;
 
 }
 
@@ -858,13 +567,13 @@ animation:zoomSlide 12s linear infinite alternate;
 
 @keyframes zoomSlide{
 
-0%{
+from{
 
 transform:scale(1);
 
 }
 
-100%{
+to{
 
 transform:scale(1.08);
 
@@ -876,21 +585,19 @@ transform:scale(1.08);
 
 position:absolute;
 
-bottom:60px;
-
 left:60px;
+
+bottom:60px;
 
 padding:30px;
 
-border-radius:24px;
+border-radius:22px;
 
 background:rgba(0,0,0,.55);
 
 backdrop-filter:blur(16px);
 
 border:1px solid rgba(255,255,255,.08);
-
-max-width:420px;
 
 }
 
@@ -900,7 +607,7 @@ font-family:'Cinzel',serif;
 
 font-size:42px;
 
-margin-bottom:15px;
+margin-bottom:12px;
 
 background:
 
@@ -920,26 +627,21 @@ linear-gradient(
 
 font-size:20px;
 
-line-height:1.8;
+color:#ddd;
 
 }
 
 .release-info strong{
 
-color:var(--gold-light);
+color:var(--goldLight);
 
 }
 
 .spotify-slide{
 
+background:#090909;
+
 padding:45px;
-
-background:
-
-linear-gradient(
-135deg,
-#050505,
-#111);
 
 }
 
@@ -956,7 +658,8 @@ border:none;
 border-radius:22px;
 
 box-shadow:
-0 0 45px rgba(30,215,96,.30);
+
+0 0 40px rgba(30,215,96,.25);
 
 }
 
@@ -970,13 +673,13 @@ left:0;
 
 width:100%;
 
-transform:translateY(-50%);
+padding:0 20px;
 
 display:flex;
 
 justify-content:space-between;
 
-padding:0 25px;
+transform:translateY(-50%);
 
 pointer-events:none;
 
@@ -984,33 +687,33 @@ pointer-events:none;
 
 .slider-controls button{
 
+pointer-events:auto;
+
 width:60px;
 
 height:60px;
 
-border-radius:50%;
-
 border:none;
 
-background:rgba(255,255,255,.08);
+border-radius:50%;
 
-backdrop-filter:blur(14px);
+background:rgba(255,255,255,.08);
 
 color:white;
 
 font-size:22px;
 
-pointer-events:auto;
-
-cursor:pointer;
+backdrop-filter:blur(12px);
 
 transition:.35s;
+
+cursor:pointer;
 
 }
 
 .slider-controls button:hover{
 
-background:rgba(255,215,120,.22);
+background:rgba(255,215,120,.25);
 
 transform:scale(1.08);
 
@@ -1024,7 +727,7 @@ justify-content:center;
 
 gap:15px;
 
-margin-top:35px;
+margin-top:30px;
 
 }
 
@@ -1046,550 +749,149 @@ transition:.35s;
 
 .dot.active{
 
-background:var(--gold-light);
+background:var(--goldLight);
 
 box-shadow:
+
 0 0 15px rgba(255,215,120,.65);
 
 }
 
-.hero-slider::before{
+/*=========================================
+ MUSIC
+=========================================*/
 
-content:"";
+.music{
 
-position:absolute;
-
-top:-150px;
-
-left:-150px;
-
-width:450px;
-
-height:450px;
-
-background:radial-gradient(
-
-circle,
-
-rgba(255,215,120,.10),
-
-transparent 70%);
-
-filter:blur(60px);
+padding:120px 8%;
 
 }
 
-.hero-slider::after{
+.music-grid{
 
-content:"";
+display:grid;
 
-position:absolute;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
 
-right:-150px;
+gap:35px;
 
-bottom:-150px;
-
-width:450px;
-
-height:450px;
-
-background:radial-gradient(
-
-circle,
-
-rgba(255,215,120,.10),
-
-transparent 70%);
-
-filter:blur(60px);
+margin-top:50px;
 
 }
 
-@media(max-width:900px){
+.music-card{
 
-.slider{
+background:#111;
 
-height:420px;
+border-radius:24px;
 
-}
+overflow:hidden;
 
-.release-info{
+box-shadow:
 
-left:20px;
+0 20px 40px rgba(0,0,0,.35);
 
-right:20px;
-
-bottom:20px;
-
-padding:22px;
-
-max-width:none;
+transition:.35s;
 
 }
 
-.release-info h2{
+.music-card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:
+
+0 0 35px rgba(255,215,120,.20);
+
+}
+
+.music-card img{
+
+width:100%;
+
+aspect-ratio:1;
+
+object-fit:cover;
+
+}
+
+.music-card h3{
 
 font-size:28px;
 
-}
-
-.release-info p{
-
-font-size:16px;
+padding:25px 25px 10px;
 
 }
 
-.spotify-slide{
+.music-card p{
 
-padding:20px;
+padding:0 25px 25px;
 
-}
+color:#bbb;
 
-.spotify-slide iframe{
-
-height:250px;
+line-height:1.8;
 
 }
 
-.slider-controls button{
-
-width:48px;
-
-height:48px;
-
-font-size:18px;
-
-}
-
-}
-
-/*=========================================
-  ALBERTO DORIAN OFFICIAL
-  MAIN.JS
-=========================================*/
-
-// Animaciones al hacer scroll
-
-const observer = new IntersectionObserver((entries)=>{
-
-entries.forEach(entry=>{
-
-if(entry.isIntersecting){
-
-entry.target.classList.add("show");
-
-}
-
-});
-
-},{
-
-threshold:.20
-
-});
-
-document.querySelectorAll(".fade").forEach((el)=>{
-
-observer.observe(el);
-
-});
-
-// Parallax del video principal
-
-const heroVideo=document.querySelector(".hero-video");
-
-window.addEventListener("scroll",()=>{
-
-const scroll=window.pageYOffset;
-
-if(heroVideo){
-
-heroVideo.style.transform=`translateY(${scroll*0.25}px) scale(1.08)`;
-
-}
-
-});
-
-// Efecto del menú al bajar
-
-const nav=document.querySelector("nav");
-
-window.addEventListener("scroll",()=>{
-
-if(window.scrollY>80){
-
-nav.classList.add("nav-scrolled");
-
-}else{
-
-nav.classList.remove("nav-scrolled");
-
-}
-
-});
-
-// Menú móvil
-
-const menuButton=document.querySelector(".menu-mobile");
-
-const menu=document.querySelector(".menu");
-
-if(menuButton){
-
-menuButton.addEventListener("click",()=>{
-
-menu.classList.toggle("open");
-
-});
-
-}
-
-// Cerrar menú al seleccionar opción
-
-document.querySelectorAll(".menu a").forEach(link=>{
-
-link.addEventListener("click",()=>{
-
-menu.classList.remove("open");
-
-});
-
-});
-
-// Botón para volver arriba
-
-const backTop=document.createElement("button");
-
-backTop.innerHTML='<i class="fa-solid fa-chevron-up"></i>';
-
-backTop.className="back-top";
-
-document.body.appendChild(backTop);
-
-window.addEventListener("scroll",()=>{
-
-if(window.scrollY>500){
-
-backTop.classList.add("show");
-
-}else{
-
-backTop.classList.remove("show");
-
-}
-
-});
-
-backTop.addEventListener("click",()=>{
-
-window.scrollTo({
-
-top:0,
-
-behavior:"smooth"
-
-});
-
-});
-
-// Año automático del footer
-
-const year=document.getElementById("year");
-
-if(year){
-
-year.textContent=new Date().getFullYear();
-
-}
-
-console.log("Alberto Dorian Official Website");
-
-/*=========================================
-  BACK TO TOP
-=========================================*/
-
-.back-top{
-
-position:fixed;
-
-right:25px;
-
-bottom:25px;
-
-width:55px;
-
-height:55px;
-
-border:none;
-
-border-radius:50%;
-
-background:linear-gradient(
-135deg,
-#D4AF37,
-#F6D365);
-
-color:#111;
-
-font-size:20px;
-
-cursor:pointer;
-
-opacity:0;
-
-visibility:hidden;
-
-transform:translateY(20px);
-
-transition:.35s;
-
-z-index:999;
-
-box-shadow:
-0 10px 25px rgba(0,0,0,.35);
-
-}
-
-.back-top.show{
-
-opacity:1;
-
-visibility:visible;
-
-transform:none;
-
-}
-
-.back-top:hover{
-
-transform:scale(1.08);
-
-box-shadow:
-0 0 20px rgba(255,215,120,.45);
-
-}
-
-/*=========================================
-  NAV SCROLLED
-=========================================*/
-
-.nav-scrolled{
-
-background:rgba(0,0,0,.75);
-
-backdrop-filter:blur(16px);
-
-transition:.35s;
-
-}
-
-/*=========================================
-  MENÚ MÓVIL
-=========================================*/
-
-@media(max-width:980px){
-
-.menu{
-
-position:absolute;
-
-top:100px;
-
-left:5%;
-
-right:5%;
-
-background:rgba(10,10,10,.95);
-
-backdrop-filter:blur(18px);
-
-border-radius:20px;
-
-padding:25px;
-
-display:none;
-
-flex-direction:column;
-
-gap:20px;
-
-}
-
-.menu.open{
+.listen-button{
 
 display:flex;
 
+justify-content:center;
+
+align-items:center;
+
+gap:12px;
+
+margin:0 25px 25px;
+
+padding:18px;
+
+border-radius:16px;
+
+background:
+
+linear-gradient(
+135deg,
+#1DB954,
+#16a34a);
+
+font-weight:700;
+
+transition:.35s;
+
 }
+
+.listen-button:hover{
+
+transform:translateY(-3px);
 
 }
 
 /*=========================================
-  ALBERTO DORIAN OFFICIAL
-  SLIDER.JS
+ VIDEO
 =========================================*/
 
-const slides=document.querySelectorAll(".slide");
-const dots=document.querySelectorAll(".dot");
+.video-wrapper{
 
-const prev=document.getElementById("prev");
-const next=document.getElementById("next");
+margin-top:50px;
 
-let current=0;
-let interval;
+border-radius:24px;
 
-function showSlide(index){
+overflow:hidden;
 
-slides.forEach(slide=>{
+box-shadow:
 
-slide.classList.remove("active");
-
-});
-
-dots.forEach(dot=>{
-
-dot.classList.remove("active");
-
-});
-
-slides[index].classList.add("active");
-
-dots[index].classList.add("active");
-
-current=index;
+0 20px 45px rgba(0,0,0,.45);
 
 }
 
-function nextSlide(){
+.video-wrapper iframe{
 
-let index=current+1;
+width:100%;
 
-if(index>=slides.length){
+aspect-ratio:16/9;
 
-index=0;
-
-}
-
-showSlide(index);
+border:none;
 
 }
-
-function prevSlide(){
-
-let index=current-1;
-
-if(index<0){
-
-index=slides.length-1;
-
-}
-
-showSlide(index);
-
-}
-
-function startSlider(){
-
-interval=setInterval(nextSlide,5000);
-
-}
-
-function stopSlider(){
-
-clearInterval(interval);
-
-}
-
-next.addEventListener("click",()=>{
-
-stopSlider();
-
-nextSlide();
-
-startSlider();
-
-});
-
-prev.addEventListener("click",()=>{
-
-stopSlider();
-
-prevSlide();
-
-startSlider();
-
-});
-
-dots.forEach((dot,index)=>{
-
-dot.addEventListener("click",()=>{
-
-stopSlider();
-
-showSlide(index);
-
-startSlider();
-
-});
-
-});
-
-startSlider();
-
-/*=========================================
-  TOUCH MOBILE
-=========================================*/
-
-const slider=document.querySelector(".slider");
-
-let startX=0;
-let endX=0;
-
-slider.addEventListener("touchstart",(e)=>{
-
-startX=e.changedTouches[0].screenX;
-
-});
-
-slider.addEventListener("touchend",(e)=>{
-
-endX=e.changedTouches[0].screenX;
-
-if(endX<startX-60){
-
-stopSlider();
-
-nextSlide();
-
-startSlider();
-
-}
-
-if(endX>startX+60){
-
-stopSlider();
-
-prevSlide();
-
-startSlider();
-
-}
-
-});
-
-/*=========================================
-  PAUSAR AL PASAR EL CURSOR
-=========================================*/
-
-slider.addEventListener("mouseenter",()=>{
-
-stopSlider();
-
-});
-
-slider.addEventListener("mouseleave",()=>{
-
-startSlider();
-
-});
-
-console.log("Slider Ready");
