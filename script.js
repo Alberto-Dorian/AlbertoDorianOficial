@@ -1,3 +1,5 @@
+alert("JavaScript cargado");
+
 /*=========================================
  ALBERTO DORIAN OFFICIAL
  VERSION 1.0
