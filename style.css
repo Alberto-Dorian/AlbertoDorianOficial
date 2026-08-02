@@ -1229,3 +1229,29 @@ font-size:13px;
 }
 
 }
+
+/*==========================
+LOGO PREMIUM
+==========================*/
+
+.logo-img{
+
+height:75px;
+
+width:auto;
+
+display:block;
+
+filter:drop-shadow(0 0 18px rgba(255,215,120,.45));
+
+transition:.35s;
+
+}
+
+.logo-img:hover{
+
+transform:scale(1.05);
+
+filter:drop-shadow(0 0 30px rgba(255,215,120,.85));
+
+}
